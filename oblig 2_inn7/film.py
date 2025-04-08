@@ -1,8 +1,8 @@
 class Film:
-    def__init__(self, tittel, str, år: int):
-    self._tittel = tittel
-    self.år = år
-    self._skuespillere = {}
+    def __init__(self, tittel: str, år: int):
+        self._tittel = tittel
+        self._år = år
+        self._skuespillere = {}
 
     def hent_tittel(self) -> str:
         return self._tittel
@@ -18,11 +18,11 @@ class Film:
         return list(self._skuespillere.keys())
     
     def skriv_ut_film(self):
-        print("Tittel: {self._tittel}")
-        print("År: {self._år}")
-        print("Skuespillere:")
+        print(f"Tittel: {self._tittel}")
+        print(f"År: {self._år}")
+        print(f"Skuespillere:")
         for navn, rolle in self._skuespillere.items():
-            print(f" {navn} "som" {rolle}")
+            print(f" {navn} som {rolle}")
 
     def sjekk_periode(self, år1: int, år2: int) -> bool:
         return år1 < self._år < år2
@@ -40,7 +40,7 @@ class Film:
             info += f"\n {navn} som {rolle}"
         return info
     
-    def __eq__(self, andre) --> bool:
- if not isinstance(andre, Film):
+    def __eq__(self, andre) -> bool:
+        if not isinstance(andre, Film):
             return False
         return self._tittel == andre._tittel and self._år == andre._år
