@@ -1,0 +1,5 @@
+1b)
+Om vi hadde lest inn filen i konstruktøren, altså ved hver opprettelse av et nytt Filmklubb-objekt, måtte vi ha hatt en fil tilgjengelig hver gang vi ønsket å benytte klassen. Det kan være veldig ugunstig om vi bare ønsker å gjøre noen mindre justeringer eller legge til én film f.eks. Derfor vil det å ha en egen metode for å lese inn filer i klassen fremfor i konstruktøren være mer praktisk.
+
+1c)
+Vi kunne også ha brukt str (string) som format for år, men int (heltall) gir mer mening her, da vi er interessert i årstall, og ønsker å bruke dette for å filtrere, sammenligne eller finne filmer. Forskjellen ligger i at str også kan inkludere tekst, og det kunne ha gitt oss noen utfordringer ved bruk av klassen -- som vi kan unngå ved å bruke int her.
